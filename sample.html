@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f5ed50 50%, #ffffff 50%);
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 3px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align:center;
+            font-weight:large;
+            padding:3px;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .pricing-tier:hover{
+            background-color: rgb(225, 207, 255);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(175, 103, 103, 0);
+            padding: 3em;
+            flex: 1;
+            margin: 1em;
+            text-align: center;
+        }
+        .pricing-tier {
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+            padding: 2em;
+            flex: 1;
+            margin: 1em;
+            text-align: center;
+        }
+
+        .pricing-tier h2 {
+            color: #333;
+        }
+        .pricing-tier p {
+            color: #666;
+        }
+        .pricing-tier button {
+            background-color: #4a4751;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 1em 2em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+    <title>Price Landing Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>Choose your Plan</h1>
+        <select id="currency" name="Currency" onclick="changecurrency()"><option value="rupee">Rupee</option>
+        <option value="dollar" selected onclick="changecurrency()">Dollar</option></select>     
+    </header>
+
+    <div class="pricing-container">
+        <div class="pricing-tier">
+            <h2>Team</h2>
+            <p>Perfect for individuals</p>
+            <p><span class="cur1">$150</span>/month</p>
+            <button>Get Started</button>
+            <ul>
+                <li>1 user per account</li>
+                <li>Unlimited events</li>
+                <li>registration Form</li>
+                <li>Email announcements</li>
+            </ul>
+        </div>
+
+        <div class="pricing-tier">
+            <h2>Agency</h2>
+            <p>Great for small businesses</p>
+            <p><span class="cur2">$20</span>/month</p>
+            <button>Get Started</button>
+            <ul list-style-type="tick">
+                <li>Unlimited paid ticket</li>
+                <li>Google Analytics Integration</li>
+                <li>Customizable registration</li>
+                <li>Event remainders</li>
+            </ul>
+        </div>
+
+        <div class="pricing-tier">
+            <h2>Pricing</h2>
+            <p>For large corporations</p>
+            <p>Contact us for pricing</p>
+            <button>Contact Sales</button>
+            <ul list-style-type="disc">
+                <li>Unlimited account user</li>
+                <li>Custom domain support</li>
+                <li>Group discount</li>
+                <li>Email Notifications</li>
+            </ul>
+        </div>
+    </div>
+    <footer>&copy My price landing page 2023;</footer>
+    <script>
+        function changecurrency(){
+        const scur=document.getElementById("currency");
+            const selectedcur=scur.value;
+            switch(selectedcur)
+            {
+                case 'dollar': document.getElementsByClassName('cur2').innerHTML("$20");
+                                document.getElementsByClassName('cur1').innerHTML("$150");
+                                break;
+                case 'rupee':document.getElementsByClassName('cur2').innerHTML("Rs.1666");
+                document.getElementsByClassName('cur1').innerHTML("Rs.12497");
+                break;
+
+            }
+        }
+    </script>
+</body>
+</html>
