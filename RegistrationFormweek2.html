@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+       body{
+        margin:0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(to right,  #e7c2a1 ,#87CEEB);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        flex-wrap: wrap;
+       } 
+       #login-container{
+        box-shadow: 0 0 10px black;
+        border-radius: 10px;
+        width: 32%;
+        height: 70%;
+        overflow: hidden;
+       }
+       #login-container:hover{
+        height: 72%;
+        width:38%;
+        box-shadow: violet;
+       }
+       .login-form{
+            padding: 20px;
+            margin:20px;
+       }
+       .login-header{
+        text-align: center;
+        font-weight: large;
+       }
+       .login-field label{
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px ;
+       }
+       .login-submit{
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 5px;
+        margin-left:45px;
+        font-weight: bold;
+        width:65px;
+        height:30px;
+        font-size: 15px;
+       }
+       .login-submit:hover{
+        width: 80px;
+        height: 40px;
+       }
+       .login-field input{
+        margin:5px;
+        border-color: #ccc;
+        color:black;
+        height:20px;
+        width: 50%;
+        border-radius: 10px;
+       }
+       #image-reg{
+        display: flex;
+       }
+    </style>
+</head>
+<body>
+    <form id="login-container">
+    <div class="login-header">
+    <h2>REGISTRATION FORM</h2>
+    </div>
+    <div class="login-form">
+        <div class="login-field">
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Username" id="username" name="username" required>
+        </div>
+        <div class="login-field">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email" id="email" name="email" required>
+        </div>
+        <div class="login-field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Password" name="password" required>
+        </div>
+        
+    </div>
+    <input type="submit" id="submit" class="login-submit" name="submit" onclick="submitbutton()">
+ </form>
+ <script>
+   function submitbutton() {
+            var form = document.getElementById('login-container');
+            if (form.checkValidity()) {
+                alert('Form submitted!');
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        }
+</script>
+</body>
+</html>
