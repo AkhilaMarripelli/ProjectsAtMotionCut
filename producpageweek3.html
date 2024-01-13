@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.j" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a><h3>UGMONK</h3></a>
+        <a><b>Login</b></a>
+        <a><b>Contact</b></a>
+        <a><b>Your Cart</b></as>
+    </header>
+    <div class="cateogory">
+        <select name="Electronics" id="Electronics" class="cat">
+            <option value="mobile">Mobiles</option>
+        </select>
+        <select name="TV & Appliances" id="TV & Appliances"class="cat">
+            <option value="TV & Appliances">TV & Appliances</option>
+        </select>
+        <select name="Men" id="Men" class="cat">
+            <option value="Men">Men</option>
+        </select>
+        <select name="Women" id="Women" class="cat">
+            <option value="Women">Women</option>
+        </select>
+        <select name="Baby" id="Baby" class="cat">
+            <option value="Baby">Baby</option>
+        </select>
+    </div>
+    <div class="card">
+        <div class="img">
+            <img src="D:\learning\webdevelopment\h1.webp" onclick="clk(this)"><br>
+            <img src="D:\learning\webdevelopment\h2.webp" onclick="clk(this)"><br>
+            <img src="D:\learning\webdevelopment\h3.webp" onclick="clk(this)"><br>
+            <img src="D:\learning\webdevelopment\h1.webp" onclick="clk(this)"><br>
+        </div>
+        <div class="left">
+            <img src="D:\learning\webdevelopment\h1.webp" id="imgs" alt="">
+        </div>
+        <div class="right">
+            <h4>Jaipur Threads</h4>
+            <h1>Women Embroidered Pure Cotton Anarkali Kurta With Attached Dupatta</h1>
+            <h1>₹699</h1>
+            <button class="size" value="L" onclick="sizeselect(this)">L</button><button class="size" value="M" onclick="sizeselect(this)">M</button><button class="size" value="S"  onclick="sizeselect(this)">S</button>
+            <h4>Selected size: <span id="sizechart"></span></h4>
+            <hr>
+            <p style="font-weight: 100;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero non est fermentum ullamcorper at ut libero.</p>
+        <ul>
+          <li>Out, seven, and dyed in Los Angeles, CA, USA</li>
+          <li>Garment dyed</li>
+          <li>Pre-washed & pre-shrunk</li>
+          <li>Soft 100% ringspun cotton</li>
+        </ul>
+        <hr>
+        <button class="cartbtn" onclick="addToCart()">Add To Cart</button>
+    </div>
+    <script>
+        function clk(newImg){
+            let getimg=document.getElementById("imgs");
+            getimg.src=newImg.src;
+        }
+        function addToCart(){
+            alert("Item added to cart");
+        }
+        function sizeselect(selectedbtn){
+            document.getElementById('sizechart').innerHTML=selectedbtn.value;
+            document.getElementById('sizechart').style.color='blue';
+        }
+    </script>
+</body>
+</html>
