@@ -104,3 +104,31 @@ header{
     cursor: pointer;
     background-color: #ccc;
 }
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cateogory {
+        flex-direction: column;
+    }
+
+    .cat {
+        margin-bottom: 5px;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        margin: 5px;
+    }
+}
